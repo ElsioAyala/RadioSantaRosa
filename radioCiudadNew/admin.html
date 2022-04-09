@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es_LA">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="styleadmin.css">
+    <script src="FileSaver.js"></script>
+</head>
+<body>
+
+    
+    
+    <div class="botones">
+        <h2 class="titulo">Programación - Radio Ciudad</h2>
+        <div class="boton">
+            <input type="submit" id="btnGuardarLocutores" value="Guarda Locutores" class="btn btn1">
+            <input type="submit" id="btnGuardarProgramas" value="Guarda Programas" class="btn btn2">
+        </div>
+    </div>
+    <div class="contenedor">
+    <!--<div class=" formularios">-->
+        <div class="overlay" id="overlayLocutor">
+            <div class="popup">
+                <a href="#" id="btnCerrarPopupLocutor" class="btn-cerrar-popup">x</a>
+    <form id="formLocutores">
+        <label>
+            <input type="text" name="avatarLocutor" id="avatar" placeholder="Avatar">
+        </label>
+        <label>
+            <input type="text" name="nombreLocutor" id="nombreLocutor" placeholder="Nombre">
+        </label>
+        <label>
+            <input type="text" name="apellidoLocutor" id="apellidoLocutor" placeholder="Apellido">
+        </label>
+        <label>
+            <input type="text" name="facebookLocutor" id="facebookLocutor" placeholder="Facebook">
+        </label>
+        <input type="submit" value="Crear Locutor" class="btn crear" >
+    </form>
+    </div>
+        </div>
+    
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <a href="#" id="btnCerrarPopup" class="btn-cerrar-popup">x</a>
+            <form id="formProgramas">
+                <label>
+                    <input type="text" name="nombrePrograma" placeholder="Nombre" id="nombrePrograma">
+                </label>
+                <div class="dias"> 
+                    <input type="checkbox" name="lunes" id="lunes" value = 1> Lun
+                    <input type="checkbox" name="martes" id="martes" value = 2> Mar
+                    <input type="checkbox" name="miercoles" id="miercoles" value = 3> Mie
+                    <input type="checkbox" name="jueves" id="jueves" value = 4> Jue
+                    <input type="checkbox" name="viernes" id="viernes" value = 5> Vie
+                    <input type="checkbox" name="sabado" id="sabado" value = 6> Sab
+                    <input type="checkbox" name="domingo" id="domingo" value = 0> Dom
+                </div>
+                <label class="horario">
+                    <input type="text" name="inicioPrograma" id="inicioPrograma" placeholder="Inicio">
+                <!--</label>
+                <label>-->
+                    <input type="text" name="finPrograma" id="finPrograma" placeholder="Fin">
+                </label>
+                <input type="submit" value="Crear Programa" class="btn crear" id="botonPrograma">
+            </form>
+        </div>
+    </div>
+
+    
+    <!--</div>-->
+
+
+    <h2>Locutores</h2>
+    <div class="agregarPrograma" id="btnAgregarLocutor">
+        Agregar 
+    </div>
+    <div id="Locutores">
+
+    </div>
+    <h2>Programas</h2>
+    <div class="agregarPrograma" id="btnAgregarPrograma">
+        Agregar 
+    </div>
+    <div id="Programas">
+
+    </div>
+    </div>
+    <script type="module" src="./scripts/index.js"></script>
+</body>
+</html>

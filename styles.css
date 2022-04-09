@@ -1,22 +1,63 @@
+:root{
+    --primary-color: #DF1746;
+    --secundary-color: #212121;
+}
+
 *{
     box-sizing: border-box;
 }
 
-html{
+body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
+.l-container{
+    width: 100%;
+}
+
+.top-bar{
+    height: 45px;
+    width: 100%;
+    background-color: var(--secundary-color); 
+
+}
+.top-bar i {
+    color: #fff;
+    font-size: 21px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.social-media{
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    width: 200px;
+    margin: 40px auto;
+}
+
+.logo img{
+    width:100%
+}
+
 
 .card{
     background-color: #f8f8f8;
-    width: 450px;
+    max-width: 450px;
     height: 100px;
     display: flex;
-    margin-top: 30px;
+    margin: 30px auto;
 }
 
 .card__img{
-    width: 120px;
-    padding: 4px 10px;
+    /*width: 120px;*/
+    width: 95px;
+    /*padding: 4px 10px;*/
+    padding: 4px;
 }
 
 .card__img img{
@@ -27,11 +68,13 @@ html{
 }
 
 .card__info{
-    margin-left: 26px;
+    /*margin-left: 26px;*/
+    margin-left: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1
+    width: 200px;
+    flex: 1;
 }
 
 .card__infoheader{
@@ -42,14 +85,11 @@ html{
     text-transform: uppercase;
     text-align: center;
     padding: 1px 6px;
-    /*margin: 1em 0;*/
-    /*font-family: "Raleway", sans-serif;*/
     width: 87px;
     background-color: #ccc;
     font-size: 12px;
     border-radius: 4px;
     display: inline-block;
-    /*opacity: 0.7;*/
     background-color: #DF1746;
     color: #fff;
     font-weight: 500;
@@ -60,22 +100,28 @@ html{
     margin: 0; 
     font-weight: 500;
     text-transform: uppercase;
-    /*margin-top: 5px;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card__infosubtitle{
     margin: 0;
     font-size: 15px;
+   
 }
 
 .card__play{
-    width: 65px;
+    /*width: 65px;*/
+    width: 50px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
 }
 
 .card__play i{
-    font-size: 40px;
+    /*font-size: 40px;*/
+    font-size: 35px;
     color: #DF1746;
 }
 
@@ -83,4 +129,21 @@ html{
     color: #DF1746;
     text-transform: uppercase;
     font-size: 14px;
+}
+
+@media screen and (min-width:450px) {
+    .card__img{
+        width: 120px;
+        padding: 4px 10px;
+    }
+    .card__info{
+        margin-left: 20px;
+    }
+    .card__play{
+        width: 65px;
+    }
+    .card__play i{
+        font-size: 40px;
+    
+    }
 }
