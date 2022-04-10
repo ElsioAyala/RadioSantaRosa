@@ -344,6 +344,7 @@ const loadProgramas = async () => {
     const programa = await response.json()
     /*imprimirProgramas(programa);*/
     todosLosProgramas = [...programa]
+    console.log(todosLosProgramas)
     ordenar(todosLosProgramas)
 }
 
@@ -396,18 +397,28 @@ const loadLocutores = async () => {
 loadProgramas();
 loadLocutores();
 
+let setTimeProgram = t => {
+    const time = new Date();
+    time.setHours(t.substr(0,2));
+    time.setMinutes(t.substr(3));
+    /*time.setSeconds(00);*/
+    return time.getTime();
+}
+
 function ordenar(programas){
 
     let arreglo = programas.sort((o1, o2) => {
-        if (o1.start < o2.start){
+        console.log(o1.start, o2.start)
+        if (setTimeProgram(o1.start) < setTimeProgram(o2.start)){
             return -1
-        }else if (o1.start > o2.start){
+        }else if (setTimeProgram(o1.start) > setTimeProgram(o2.start)){
             return 1
         }else{
             return 0
         }
     })
     imprimirProgramas(arreglo)
+   
 }
 
 let abrirPopup = document.getElementById("btnAgregarPrograma")
