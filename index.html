@@ -9,19 +9,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
-    <title>Radio Santa Rosa</title>
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.css">
+    <title>Radio Santa Rosa | 101.1
+    </title>
+    <meta name="description" content="Radio Santa Rosa - Sauce Provincia de Corrientes, FM 101.1Mhz">
+
+    <!--PWA-->
+    <link rel="manifest" href="./manifest.json"> 
+    <!---PWA--->
+    <!----METAS DE PWA-->
+    <meta name="theme-color" content="#212121">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" type="image/png" href="./images/icons/icon-512x512.png">
+    <link rel="apple-touch-icon" href="./images/icons/icon-512x512.png">
+    <link rel="apple-touch-startup-image" href="./images/icons/icon-512x512.png">
+
+    <link rel="apple-touch-icon" href="./images/icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" href="./images/icons/icon-96x96.png" />
+    <link rel="apple-touch-icon" href="./images/icons/icon-128x128.png" />
+    <link rel="apple-touch-icon" href="./images/icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" href="./images/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" href="./images/icons/icon-384x384.png" />
+    <link rel="apple-touch-icon" href="./images/icons/icon-512x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#212121" />
+
 </head>
 <body>
     <div class="top-bar">
-        <div class="l-container">
+        <div class="l-container flex">
             <div class="social-media">
-                <i class="fa-brands fa-whatsapp"></i>
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-instagram"></i>
+                <a href="https://api.whatsapp.com/send?phone=543774405716&text=Hola%20👋" target="_blank"><i class="fa-brands fa-whatsapp" title="Escribinos por WhatsApp"></i></a>
+                <a href="https://www.instagram.com/fmsantarosa101.1/"><i class="fa-brands fa-instagram" title="Instagram"></i></a>
+                <a href="https://www.facebook.com/santarosa101.1"><i class="fa-brands fa-facebook-f" title="Facebook"></i></a>
+                <!--<i class="fa-brands fa-twitter" title="Twitter"></i>-->
+               
+            </div>
+
+            <div class="volume">
+                <div class="volume-icon">
+                    <i class="fa-solid fa-volume-high" id="volumeIcon"></i>
+                </div>
+                <div class="range">
+                    <input type="range" name="" id="volume" max="100" min="0" step="1" value="100">
+                </div>
             </div>
         </div>
+        
     </div>
 
 
@@ -30,7 +67,7 @@
             <img src="./images/logo.png" alt="" srcset="">
         </div>
     </header>
-    
+    <!--
     <section class="today-programming l-container">
         <div class="card">
             <div class="card__img">
@@ -84,144 +121,29 @@
         </div>
 
     </section>
+    -->
 
-    <hr>
-
-    <section class="today-programming l-container">
-
+    <section class="today-programming">
         <div class="glide">
-
-   
-            <div class="glide__track" data-glide-el="track">
-    
-                
-              <div class="glide__slides">
-                <!---
-                <div class="glide__slide">
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="./img/1.png" alt="Foto de Locutor">
-                        </div>
-                        <div class="card__info">
-                
-                            <div class="card__infoheader">
-                                <div class="vivo">EN VIVO</div>
-                            </div>
-                            <h3 class="card__infositle">La Mañana de Todos</h3>
-                            <p class="card__infosubtitle">Lu a Vie 9h a 12h</p>
-                        </div>
-                        <div class="card__play play-stop">
-                            <i id="icon" class="fa-solid fa-play"></i>
-                        </div>
-                    </div>
+            <div class="glide__track" data-glide-el="track"> 
+                <div class="glide__slides">
                 </div>
-                <div class="glide__slide">
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="./img/2.png" alt="Foto de Locutor">
-                        </div>
-                        <div class="card__info">
-                
-                            <div class="card__infoheader">
-                                <div class="tag">A continuación</div>
-                            </div>
-                            <h3 class="card__infositle">ShowLand</h3>
-                            <p class="card__infosubtitle">Lu a Vie 13h a 15h</p>
-                        </div>
-                        <div class="card__play">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="glide__slide">
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="./img/3.png" alt="Foto de Locutor">
-                        </div>
-                        <div class="card__info">
-                
-                            <div class="card__infoheader">
-                                <div class="tag">Luego</div>
-                            </div>
-                            <h3 class="card__infositle">Chamamé</h3>
-                            <p class="card__infosubtitle">Lu a Vie 15h a 18h</p>
-                        </div>
-                        <div class="card__play">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="glide__slide">
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="./images/03.jpg" alt="Foto de Locutor">
-                        </div>
-                        <div class="card__info">
-                
-                            <div class="card__infoheader">
-                                <div class="tag">Luego</div>
-                            </div>
-                            <h3 class="card__infositle">Chamamé</h3>
-                            <p class="card__infosubtitle">Lu a Vie 15h a 18h</p>
-                        </div>
-                        <div class="card__play">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="glide__slide">
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="./images/03.jpg" alt="Foto de Locutor">
-                        </div>
-                        <div class="card__info">
-                
-                            <div class="card__infoheader">
-                                <div class="tag">Luego</div>
-                            </div>
-                            <h3 class="card__infositle">Chamamé</h3>
-                            <p class="card__infosubtitle">Lu a Vie 15h a 18h</p>
-                        </div>
-                        <div class="card__play">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="glide__slide">
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="./images/03.jpg" alt="Foto de Locutor">
-                        </div>
-                        <div class="card__info">
-                
-                            <div class="card__infoheader">
-                                <div class="tag">Luego</div>
-                            </div>
-                            <h3 class="card__infositle">Chamamé</h3>
-                            <p class="card__infosubtitle">Lu a Vie 15h a 18h</p>
-                        </div>
-                        <div class="card__play">
-                            
-                        </div>
-                    </div>
-                </div>
-            -->
-            </div>
             </div>
     
             <div class="glide__arrows" data-glide-el="controls">
                 <i class="glide__arrow glide__arrow--left fa-solid fa-chevron-left" data-glide-dir="<"></i>
                 <i class="glide__arrow glide__arrow--right fa-solid fa-chevron-right" data-glide-dir=">"></i>
-                <!--<button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>-->
-              </div>
-    
-          </div>
+            </div>
+        </div>
     </section>
+    
 
-  
+    <footer class="footer">
+        Radio Santa Rosa 101.1Mhz - Sauce Corrientes
+    </footer>
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script src="https://kit.fontawesome.com/be0b6b45d6.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>
+
 </html>
