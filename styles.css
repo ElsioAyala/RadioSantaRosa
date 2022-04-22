@@ -12,7 +12,7 @@ body{
     margin: 0;
     /*background-color:blueviolet;*/
     position: relative;
-    height: calc(100vh - 50px);
+    height: 100vh;
     background-image: url(./images/layered.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -256,9 +256,9 @@ body{
         width: 390px !important;
         padding-bottom: 60px;
     }
-    .body{
+    /*.body{
         min-height: calc(100vh - 80px);
-    }
+    }*/
     .footer{
         font-size: 16px;
         height: 80px;
@@ -317,7 +317,9 @@ body{
     .social-media{
         flex-direction: row;
     }
-
+    .comments{
+        padding: 25px;
+    }
 
 }
 
@@ -468,9 +470,10 @@ input[type="range"]::-moz-range-progress{
     text-align:center;
     /*background-color: red;*/
     height: 50px;
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
-    bottom: -50px;
+    /*bottom: -50px;*/
+    margin-top: 40px;
     font-size: 14px;
     color: #fff;
 }
@@ -523,13 +526,27 @@ input[type="range"]::-moz-range-progress{
         margin-right: auto;
     }
     .logo{
-        width:150px;
+        width:190px;
     }
     .footer{
         font-size: 12px;
     }
+    .comments{
+        padding: 0 !important;
+    }
 
-    /*.glide__slides{
-        margin-left: -1px !important
-    }*/
+    
+}
+
+.comments{
+    max-width: 450px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fb-comments{
+    margin: 0 auto;
 }
