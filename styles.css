@@ -203,6 +203,14 @@ body{
         bottom: -80px;
         font-size: 14px;
     }
+    .volume:hover input[type="range"]{
+        width: 100%;
+        
+    }
+    .volume:hover{
+        width: 132.5px;
+        
+    }
 
 }
 
@@ -239,6 +247,7 @@ body{
     height: 400px;
     margin: 0 auto;
     /*background-color: seagreen;*/
+    border: none;
 }
 
 
@@ -260,15 +269,9 @@ body{
     transition: 0.5s all;
 }
 
-.volume:hover{
-    width: 132.5px;
-    
-}
 
-.volume:hover input[type="range"]{
-    width: 100%;
-    
-}
+
+
 
 
 
