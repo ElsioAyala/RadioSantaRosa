@@ -190,7 +190,7 @@ body{
         height: 450px !important;
     }
 
-    .glide{
+    .glide.glide--ltr{
         width: 390px !important;
         padding-bottom: 60px;
     }
@@ -235,12 +235,14 @@ body{
 .card{
     transform:rotate(-90deg);
     transform-origin: 100% 0;
-    margin-top: 5px;
+    /*margin-top: 5px;*/
     
 }
 
 .glide{
     transform:rotate(90deg);
+    width: 348px !important;
+    /*padding-bottom: 2px;*/
 }
 
 .today-programming{
