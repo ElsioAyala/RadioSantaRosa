@@ -123,7 +123,8 @@ const showProgram = (allProgramas) => {
                         card__infoheader.className = 'card__infoheader'
                         card__info.appendChild(card__infoheader)
                             const vivo = document.createElement('div')
-                            status === "live" ? vivo.className = 'vivo' : vivo.className = "tag"
+                            /*vivo.className= 'animation'*/
+                            status === "live" ? vivo.className = 'vivo animation' : vivo.className = "tag"
                             if (status === "live") vivo.textContent = 'EN VIVO', startSlide = index
                             else if (status === "continuation") vivo.textContent = 'A Continuación', status = "later"
                             else if (status === "later") vivo.textContent = 'Luego', status = "complete"
