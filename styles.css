@@ -33,42 +33,100 @@ body{
     }
 }
 
-.flex{
+/*.flex{
     display: flex;
     justify-content: space-between;
-}
+}*/
 
-.top-bar{
+/*.top-bar{
     height: 45px;
     width: 100%;
     background-color: var(--secundary-color); 
 
-}
-.top-bar i {
+}*/
+
+/*.top-bar i {
     color: #fff;
     font-size: 21px;
     cursor: pointer;
     padding: 10px;
-}
+}*/
 
 /*# sourceMappingURL=glide.fa-whatsapp{
     font-size: 22px !important;
 }*/
-
+.menu{
+    display:flex;
+    justify-content: space-between;
+}
 .social-media{
-    padding-left: 5px;
     height: 45px;
     display: flex;
-    /*justify-content: space-around;*/
+    flex-direction: column;
+
+}
+
+.social-media a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.social-media a:hover{
+  background-color: #505050
+}
+
+.social-media i {
+    margin-right: 5px;
+}
+
+.menu nav{
+    position: fixed;
+    background:#212121;
+    width: 200px;
+    height:100vh;
+    top: 0;
+    left: -200px;
+    padding: 20px;
+    z-index: 1;
+    transition: all 300ms;
+
+}
+
+
+
+#back_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+    display: none;
+}
+#btn_menu{
+    display: flex;
     align-items: center;
-    flex-direction: row-reverse;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 300ms
+}
+
+#btn_menu:hover{
+    background: rgba(0,0,0,.1)
+ 
 }
 
 .logo{
     width: 200px;
-    margin: 40px auto;
-    margin-top: 30px;
-    margin-bottom: 40px
+    margin: auto;
+    /*padding-top: 20px;*/
+    /*margin-top: 30px;*/
+    margin-bottom: 60px
 }
 
 .logo img{
@@ -161,7 +219,7 @@ body{
 @media screen and (min-width:450px) {
     .logo {
         width: 300px;
-        margin-top: 50px;
+        padding-top: 50px;
         margin-bottom: 50px;
     }
     
@@ -213,6 +271,51 @@ body{
         width: 132.5px;
         
     }
+    .volume-icon i{
+        color: #fff !important;
+    }
+
+    .container__menu{
+        background-color: #212121;
+        height: 45px;
+        display: flex;
+        align-items: center;
+    
+    }
+
+    .menu{
+        width: 95%;
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #btn_menu{
+        display: none;
+    }
+
+    .social-media span {
+        display: none;
+    }
+
+    .social-media i {
+        font-size: 20px;
+        margin-right: 0;
+    }
+
+    .menu nav {
+        position: relative;
+        left: 0 !important;
+        height: 45px;
+        width: 100%;
+        padding: 0;
+        background: transparent
+
+    }
+    .social-media{
+        flex-direction: row;
+    }
+
 
 }
 
@@ -263,7 +366,7 @@ body{
 
 
 .volume{
-    width: 38px;
+    width: 30px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -338,7 +441,7 @@ input[type="range"]::-moz-range-progress{
 .volume-icon i{
    
     font-size: 18px;
-    color: #fff;
+    color: #212121;
     cursor: pointer;
     /*transform: rotate(-90deg);*/
 }

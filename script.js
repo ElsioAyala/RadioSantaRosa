@@ -257,3 +257,13 @@ volume.addEventListener('mousemove', () => {
 window.onload = loadProgram;
 
 
+btn_menu.addEventListener("click", () =>{
+    nav.style.left = "0px"
+    back_menu.style.display = "block"
+})
+
+back_menu.addEventListener("click", () =>{
+    nav.style.left = "-200px"
+    back_menu.style.display = "none"
+})
+
