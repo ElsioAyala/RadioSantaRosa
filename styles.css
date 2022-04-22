@@ -235,6 +235,7 @@ body{
 .card{
     transform:rotate(-90deg);
     transform-origin: 100% 0;
+    margin-top: 2px;
     
 }
 
@@ -247,7 +248,7 @@ body{
     height: 400px;
     margin: 0 auto;
     /*background-color: seagreen;*/
-    border: none;
+    /*border: none;*/
 }
 
 
