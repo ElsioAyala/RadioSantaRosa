@@ -183,8 +183,8 @@ const showProgram = (allProgramas) => {
 }
 
 
-//let cancion = "https://node-13.zeno.fm/afnx6011qtzuv?rj-ttl=5&amp;rj-tok=AAABcNZhJCYAfGXcwx6yzGvX7g.mp3"
-let cancion = "https://boing.streaming.gabrielli.com.ar/radio/8010/radio.aac"
+let cancion = "http://stream.zeno.fm/d0up6mm3pnhvv.aac"
+//let cancion = "https://boing.streaming.gabrielli.com.ar/radio/8010/radio.aac"
 
 audio = new Audio(`${cancion}`)
 
