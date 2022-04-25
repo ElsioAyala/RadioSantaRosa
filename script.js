@@ -143,13 +143,14 @@ const showProgram = (allProgramas) => {
                         if (status == "live"){
                         /*isLive = true*/
                         control.classList.add('play-stop')
-                        control.setAttribute('onclick', 'play()')
+                        /*control.setAttribute('onclick', 'play()')*/
                         const controlIcon1 = document.createElement('i')
+                        controlIcon1.setAttribute('onclick', 'play()')
                         //controlIcon1.setAttribute('id', 'icon')
                         isPlay === 0 ? controlIcon1.classList.add('fa-solid', 'fa-play', 'active', 'icon') : controlIcon1.classList.add('fa-solid', 'fa-play', 'icon')
                         control.appendChild(controlIcon1)
                         const controlIcon2 = document.createElement('i')
-                        //controlIcon1.setAttribute('id', 'icon')
+                        controlIcon2.setAttribute('onclick', 'pause()')
                         isPlay === 1 ? controlIcon2.classList.add('fa-solid', 'fa-pause', 'active', 'icon') : controlIcon2.classList.add('fa-solid', 'fa-pause', 'icon');
                         control.appendChild(controlIcon2)
                         status = "continuation"
@@ -186,8 +187,12 @@ const showProgram = (allProgramas) => {
 let cancion = "http://stream.zeno.fm/d0up6mm3pnhvv.aac"
 //let cancion = "https://boing.streaming.gabrielli.com.ar/radio/8010/radio.aac"
 
-audio = new Audio(`${cancion}`)
+/*audio = new Audio(`${cancion}`)*/
 
+
+/*let audio = () => {
+    return new Audio(`${cancion}`)
+}*/
 const control = () =>{
     /*let icon = document.querySelector(".icon")
     console.log()
@@ -202,13 +207,13 @@ const control = () =>{
 }
 
 
-const play = () => {
-    /*control()*/
+/*const play = () => {
+
     let play = document.querySelector(".fa-play")
     let pause = document.querySelector(".fa-pause")
     if(isPlay === 0){
         console.log("play")
-        audio.play()
+        audio().play()
         audio.volume = volume.value / 100
         isPlay = 1
         play.classList.remove("active")
@@ -222,6 +227,32 @@ const play = () => {
     }
    
    
+}*/
+
+let audio
+let audioLoad = false
+
+const play = () => {
+    let play = document.querySelector(".fa-play")
+    let pause = document.querySelector(".fa-pause")
+    console.log("Play")
+    !audioLoad ? audio = new Audio(`${cancion}`) : null
+    audioLoad = true
+    audio.play()
+    audio.volume = volume.value / 100
+    isPlay = 1
+    play.classList.remove("active")
+    pause.classList.add("active")
+}
+
+const pause = () => {
+    let play = document.querySelector(".fa-play")
+    let pause = document.querySelector(".fa-pause")
+    console.log("pause")
+    audio.pause()
+    isPlay = 0
+    pause.classList.remove("active")
+    play.classList.add("active")
 }
 
 
